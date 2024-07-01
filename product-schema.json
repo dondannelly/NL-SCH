@@ -1,0 +1,112 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Product Data Feed Schema",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for the product",
+        "xml": {
+          "name": "g:id"
+        }
+      },
+      "title": {
+        "type": "string",
+        "description": "Name of the product",
+        "xml": {
+          "name": "title"
+        }
+      },
+      "description": {
+        "type": "string",
+        "description": "Description of the product",
+        "xml": {
+          "name": "description"
+        }
+      },
+      "link": {
+        "type": "string",
+        "description": "URL to the product page",
+        "xml": {
+          "name": "link"
+        }
+      },
+      "image_link": {
+        "type": "string",
+        "description": "URL to the product image",
+        "xml": {
+          "name": "g:image_link"
+        }
+      },
+      "product_type": {
+        "type": "string",
+        "description": "Category of the product",
+        "xml": {
+          "name": "g:product_type"
+        }
+      },
+      "availability": {
+        "type": "string",
+        "description": "Stock status of the product",
+        "xml": {
+          "name": "g:availability"
+        }
+      },
+      "price": {
+        "type": "string",
+        "description": "Price of the product",
+        "xml": {
+          "name": "g:price"
+        }
+      },
+      "brand": {
+        "type": "string",
+        "description": "Brand of the product",
+        "xml": {
+          "name": "g:brand"
+        }
+      },
+      "condition": {
+        "type": "string",
+        "description": "Condition of the product",
+        "xml": {
+          "name": "g:condition"
+        }
+      },
+      "gtin": {
+        "type": "string",
+        "description": "Global Trade Item Number",
+        "xml": {
+          "name": "g:gtin"
+        }
+      },
+      "mpn": {
+        "type": "string",
+        "description": "Manufacturer Part Number",
+        "xml": {
+          "name": "g:mpn"
+        }
+      },
+      "shipping": {
+        "type": "object",
+        "description": "Shipping details",
+        "properties": {
+          "country": {
+            "type": "string",
+            "description": "Shipping country",
+            "xml": {
+              "name": "g:country"
+            }
+          },
+          "price": {
+            "type": "string",
+            "description": "Shipping price",
+            "xml": {
+              "name": "g:price"
+            }
+          }
+        }
+      }
+    },
+    "required": ["id", "title", "link", "image_link", "price", "availability"]
+  }
